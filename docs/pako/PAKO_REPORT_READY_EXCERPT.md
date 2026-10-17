@@ -1,0 +1,39 @@
+# Pako — Report-Ready Sections (Draft)
+
+**COMP 441 / Track C | SmartCare Hospital Management System | Prepared 17 October 2026**
+
+**Ownership and status:** These are **Pako's sections only**, ready for team review by Thabiso. They are source-grounded drafts; bracketed evidence entries must be replaced with results from completed work before final submission.
+
+## Methodology — Weeks 5–6; updated through Week 12
+
+Our Track C project tests the SmartCare hospital-management repository using a risk-based, multi-level approach. The priority areas are patient data integrity, registration validation, appointment availability and conflicts, role-restricted actions, and storage of medical records. The workflow follows the COMP 441 requirements: study the selected repository, obtain an AI-only test and coverage baseline, measure mutation v1, create targeted manual tests, add TDD/BDD and integration evidence, repeat mutation measurement on the hybrid suite, and use CI to guard against regressions. AI-generated test code must be reviewed before its results are trusted.
+
+The existing application uses **Django 4.2.9** (root `requirements.txt`), Python, the Django ORM and **SQLite** (`hms_project/settings/base.py`). The repository contains Pytest-style examples (`test_patient_validation.py` and `test_integration.py`) and specialist scripts importing **pandas**, **scikit-learn** and **GitPython**, but most test tool versions are not pinned. The proposed automation uses **Python 3.11**, **pytest**, **pytest-django**, **pytest-cov/coverage.py**, **mutmut** and **GitHub Actions**. Before submission record actual versions with `python --version`, `python -m pytest --version`, `python -m django --version`, `pip show ...`, and the executed workflow's commit SHA. Pylint/static and specialist-classifier evidence is collected by Miguel; AI-generated prompts, initial mutation scores and survivor identifiers by Maano; RTM completeness by Thabiso.
+
+Use only synthetic patient data and the temporary Django test database. The root application containing `manage.py` is the reference codebase; do not mix measurements with the nested `hospital-management-system/` duplicate. Preserve AI-only and hybrid test selections as separate reproducible runs. Report line and branch coverage, use the same mutation tool/scope/exclusions for v1 and v2, and link each manual test to a specific gap or mutant. **Actual execution evidence:** [Django tests and versions], [AI-only baseline], [v1/v2 mutation reports], [test run/commit ID].
+
+## Hybrid Suite Design Rationale — Weeks 7–9; refresh in Week 11
+
+A hybrid suite is preferable to an AI-only suite because AI-produced cases often check common inputs while overlooking business-specific conditions, missing branches or weak assertions. In the current repository, `test_patient_validation.py` tests a function defined *inside that test file*, not production patient registration; `test_integration.py` ends in unconditional `assert True`. These are not sufficient independent evidence of patient validation or database persistence. We therefore propose manually constructed tests based on actual `Patient`, `PatientRegistrationForm` and `Appointment` code, and explain their purpose using named test-design techniques rather than arbitrary test counts.
+
+| Design technique | Application target | Why the proposed test is needed |
+|---|---|---|
+| Boundary value analysis | Patient `age` property, date-of-birth boundaries; appointment `start_time`/`end_time` | Detect birthday and off-by-one comparison faults; reject same-time or inverted intervals |
+| Equivalence partitioning | Patient registration required fields, valid/invalid contact values | Check valid, missing and malformed input classes using synthetic records |
+| Decision tables | Doctor on approved leave, emergency exemptions, overlapping patient/doctor bookings | Exercise multiple conditions instead of only the normal booking path |
+| State transition testing | Patient create/update/delete and appointment statuses | Prove persistence and allowed/blocked business transitions in the Django ORM |
+| Integration and acceptance testing | Patient models + SQLite, appointment components, access control | Catch interface and database defects not visible in isolated unit tests |
+
+Manual tests must include meaningful expected outcomes and independently exercise production functions. For each of **at least eight** surviving AI-only mutants, link Maano's real mutant ID and changed line to a specific human-designed test, its technique, its passing/failing results and the v2 outcome; update Thabiso's RTM. Do not treat artificial age bounds as business requirements unless the repository actually implements them. A risk-first order prioritizes record/permission integrity, scheduling conflicts, database integration, then lower-risk display behaviour; the **final ranked priority list must come from Maano's documented heuristic and evidence**. **Unfilled results:** [8+ v1 survivor IDs and manual tests], [AI-only coverage], [hybrid coverage], [v1 → v2 mutation percentages].
+
+## CI/CD Pipeline Summary and Quality-Gate Justification — Week 12; Week 13 demonstration
+
+Pako's additive `.github/workflows/pako-quality-gate.yml` is designed to run on GitHub pushes and pull requests against the repository's **root** Django application. It checks out the current commit, configures Python 3.11 and development-only settings, installs application/test dependencies, runs Django system checks, executes Pytest while recording line and branch coverage and uploads the resulting `coverage.xml` artifact. The companion script `scripts/pako_quality_gate.py` reads the same-run Cobertura XML and fails if the policy's required line coverage is not achieved. Five isolated tests of the gate script have passed in the authoring environment; **that does not establish a passing GitHub Actions or application test run**.
+
+The included `docs/pako/quality_gate_policy.json` initially specifies **50% line coverage** and a **proposed 60% mutation score**. These are **provisional examples, not measured or group-approved targets**. The supplied gate currently enforces line coverage only; mutation enforcement is intentionally disabled pending Maano's reproducible v2 results and the integration of a same-commit mutation step. It therefore **does not yet fulfil the final brief's mutation quality gate**. Once mutation results are computed from the current CI run, the group must approve thresholds, set `enforce_mutation=true`, and feed a generated score JSON with matching commit SHA into the gate script. Failure to meet either enforced threshold will produce a nonzero exit code and block the workflow. Miguel must also ensure CI explicitly runs actual unit, integration and automated BDD/acceptance tests; current BDD execution remains unverified.
+
+Coverage tracks executed source; mutation tests whether assertions can detect incorrect program behaviour. Their combination is stronger than test count alone, but both require review of assertion quality and clinical-data privacy. For the Week 13 presentation, demonstrate [passing run URL + SHA] and [deliberately failed run URL + reason], and show the versioned gate policy and artifacts. **Remaining evidence:** [coverage XML line/branch scores], [mutation v2 from the same build], [group-approved thresholds], [CI screenshots and tool versions].
+
+## Handoff notes
+
+**Thabiso:** merge the three finished text sections, but retain placeholders until real evidence arrives. **Maano:** send v1/v2 mutation reports, eight survivor analyses and final execution-priority ranking. **Miguel:** send real integration/BDD test filenames/commands, actual pass results and test-level mapping. **Pako:** finalize tool versions and the GitHub Actions coverage/mutation gate; record successful and deliberately failed CI runs.

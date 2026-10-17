@@ -1,0 +1,6 @@
+{
+  "minimum_line_coverage": 50.0,
+  "minimum_mutation_score": 60.0,
+  "enforce_mutation": false,
+  "notes": "PROVISIONAL, NOT GROUP-APPROVED. Coverage is enforced now. Flip enforce_mutation to true only when a current-commit mutmut result is produced in the same CI run; verify thresholds after baseline results."
+}
