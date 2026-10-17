@@ -1,0 +1,75 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0
+django: version: 4.2.9, settings: hms_project.settings.dev (from ini)
+rootdir: C:\Users\dikga\trackc_group_assignment
+configfile: pytest.ini
+plugins: cov-7.1.0, django-4.14.0
+collected 6 items
+
+test_integration.py .                                                    [ 16%]
+test_patient_validation.py .....                                         [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                                                             Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------------------------------------
+appointment\__init__.py                                                              0      0      0      0   100%
+appointment\admin.py                                                                16      0      0      0   100%
+appointment\apps.py                                                                  4      0      0      0   100%
+appointment\forms\__init__.py                                                        4      4      0      0     0%   6-19
+appointment\forms\appointments.py                                                   86     86     36      0     0%   1-162
+appointment\forms\availability.py                                                   21     21      2      0     0%   1-34
+appointment\forms\leave.py                                                          58     58     14      0     0%   1-110
+appointment\migrations\0001_initial.py                                               7      7      0      0     0%   3-16
+appointment\migrations\0002_initial.py                                               6      6      0      0     0%   3-16
+appointment\migrations\0003_doctorleaverequest.py                                    6      6      0      0     0%   3-15
+appointment\migrations\0004_appointment_is_emergency.py                              4      4      0      0     0%   3-12
+appointment\migrations\__init__.py                                                   0      0      0      0   100%
+appointment\models.py                                                              143     65     46      0    41%   30, 34-45, 85, 89-111, 115-121, 126-127, 135-138, 147-150, 210, 214-282, 286-287, 292-296
+appointment\urls.py                                                                  3      3      0      0     0%   1-4
+appointment\views\__init__.py                                                        7      7      0      0     0%   6-43
+appointment\views\appointments.py                                                  327    327    128      0     0%   1-572
+appointment\views\availability.py                                                   47     47      4      0     0%   1-61
+appointment\views\dashboards.py                                                    105    105     16      0     0%   1-231
+appointment\views\inquiries.py                                                     165    165     42      0     0%   1-335
+appointment\views\leave.py                                                         101    101     32      0     0%   1-180
+appointment\views\notifications.py                                                 102    102     30      0     0%   1-190
+patient\__init__.py                                                                  0      0      0      0   100%
+patient\admin.py                                                                    74     15      6      0    74%   30-33, 37-38, 82, 85, 120-126, 129
+patient\apps.py                                                                      4      0      0      0   100%
+patient\forms\__init__.py                                                            5      5      0      0     0%   6-25
+patient\forms\admissions.py                                                         68     68     20      0     0%   1-154
+patient\forms\medical_records.py                                                    23     23      2      0     0%   1-66
+patient\forms\patients.py                                                           24     24      4      0     0%   1-59
+patient\forms\rooms.py                                                              33     33      2      0     0%   1-64
+patient\management\__init__.py                                                       0      0      0      0   100%
+patient\management\commands\__init__.py                                              0      0      0      0   100%
+patient\management\commands\setup_hospital.py                                       59     59     18      0     0%   1-130
+patient\management\commands\setup_nurse_assignments.py                              68     68     24      0     0%   1-231
+patient\migrations\0001_initial.py                                                   8      8      0      0     0%   3-18
+patient\migrations\0002_patient_profile_picture.py                                   4      4      0      0     0%   3-12
+patient\migrations\0003_medicalrecord_blood_pressure_and_more.py                     4      4      0      0     0%   3-12
+patient\migrations\0004_bed_room_patientadmission_nurse_bed_room_and_more.py         7      7      0      0     0%   3-16
+patient\migrations\0005_prescription.py                                              5      5      0      0     0%   3-13
+patient\migrations\0006_admissionrequest_and_more.py                                 7      7      0      0     0%   3-16
+patient\migrations\0007_update_nurse_floor_assignments.py                            4      4      0      0     0%   3-12
+patient\migrations\0008_alter_admissionrequest_preferred_room_type_and_more.py       4      4      0      0     0%   3-12
+patient\migrations\__init__.py                                                       0      0      0      0   100%
+patient\models.py                                                                  323     90     36      0    65%   65, 69-75, 78, 83-84, 91, 133, 137, 186, 191-196, 310, 314-346, 351, 356, 361-362, 367, 390, 394-399, 447-448, 453, 461, 466-469, 474-479, 483, 487-491, 552, 610, 614-635, 639-652, 657-658, 663
+patient\selectors.py                                                                40     40     12      0     0%   1-75
+patient\services.py                                                                 32     32      2      0     0%   1-47
+patient\templatetags\__init__.py                                                     0      0      0      0   100%
+patient\templatetags\patient_extras.py                                              25     25      2      0     0%   1-34
+patient\urls.py                                                                      3      3      0      0     0%   1-4
+patient\views\__init__.py                                                            8      8      0      0     0%   6-57
+patient\views\admission_requests.py                                                127    127     42      0     0%   1-248
+patient\views\admissions.py                                                        173    173     82      0     0%   1-324
+patient\views\medical_records.py                                                   135    135     44      0     0%   1-236
+patient\views\nurse.py                                                              60     60      8      0     0%   1-108
+patient\views\patients.py                                                          123    123     26      0     0%   1-252
+patient\views\reports.py                                                            58     58      8      0     0%   1-124
+patient\views\rooms.py                                                             125    125     46      0     0%   1-244
+----------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                             2845   2451    734      0    11%
+============================== 6 passed in 3.08s ==============================
