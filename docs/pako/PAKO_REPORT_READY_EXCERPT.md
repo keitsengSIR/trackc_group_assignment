@@ -1,4 +1,4 @@
-# Pako — Report-Ready Sections (Draft)
+# Pako — Report-Ready Sections
 
 **COMP 441 / Track C | SmartCare Hospital Management System | Prepared 17 October 2026**
 
