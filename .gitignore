@@ -99,4 +99,5 @@ htmlcov/
 *.key
 *.crt
 secrets/
-credentials/
+credentials/venv/
+*.sqlite
