@@ -1,0 +1,51 @@
+[job-id] 0cb04292782249dc905a856f5ca1d25b
+patient/forms/patients.py core/AddNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f9061900a4ed4571b210f72bdbdc3120
+patient/forms/patients.py core/AddNot 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] fb4c85ec9d474937bd068fda81421a60
+patient/forms/patients.py core/ReplaceTrueWithFalse 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] d3714cb5c9cb4846a6f4429f4adf98fe
+patient/forms/patients.py core/ReplaceFalseWithTrue 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0b02f4e9f384424d83000222be0ae79c
+patient/forms/patients.py core/ReplaceFalseWithTrue 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 40871bf3885a4c51b88442af6c11401c
+patient/forms/patients.py core/ReplaceFalseWithTrue 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] de4daeb5450d4a9e821c585e87f4cd73
+patient/forms/patients.py core/ReplaceFalseWithTrue 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] b4ad9191971e488da55a1d5cace0e3bd
+patient/forms/patients.py core/ReplaceAndWithOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] dd0e5c0d7e75499b82c8181db46fef53
+patient/forms/patients.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c221cf89496546c6881a6a367bd041a4
+patient/forms/patients.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 5229ffdc0fbb4c66a1920abf8c1173ff
+patient/forms/patients.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 798cbf46874a4661ba4ceec7f1ed2507
+patient/forms/patients.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0f83d9aa53294227ae8bc18bbebfa261
+patient/forms/patients.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a4d781d7bfaf46f4b064b1e45e998ab8
+patient/forms/patients.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ca155272ee7941409d12031ccb6f4d42
+patient/forms/patients.py core/NumberReplacer 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 5275e992316e4ae1a62272cfe790a8a1
+patient/forms/patients.py core/NumberReplacer 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+total jobs: 16
+complete: 16 (100.00%)
+surviving mutants: 1 (6.25%)
