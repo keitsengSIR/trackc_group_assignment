@@ -1,4 +1,4 @@
-# PAKO | Week 13 (17 Nov 2026) | CI/CD live demonstration checklist
+# | Week 13 (17 Nov 2026) | CI/CD live demonstration checklist
 
 **Status:** Plan only, not evidence of a completed demo.
 
