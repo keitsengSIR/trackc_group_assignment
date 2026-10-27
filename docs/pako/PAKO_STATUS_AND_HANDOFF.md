@@ -17,7 +17,7 @@
 | 12 (10 Nov) | CI pipeline source files and quality-gate justification | `.github/workflows/pako-quality-gate.yml`, `scripts/pako_quality_gate.py`, `docs/pako/quality_gate_policy.json`, `WEEK_12_CICD_Quality_Gate.md` | **Initial source prepared; self-tests pass; final mutation enforcement and CI passing run pending** |
 | 13 (17 Nov) | Live passing/failing CI quality-gate demonstration | `WEEK_13_Demo_Checklist.md` | **Planned**, no run claimed |
 
-## Handoff boundaries / do not edit teammates' work
+## Handoff boundaries 
 
 - **Thabiso:** executive summary, charter/risk overview, RTM, reflection, appendices. Send Thabiso final confirmed methodology, thresholds, run URLs, and the source file path. Do not rewrite their RTM.
 - **Maano:** AI-only coverage, v1 and v2 mutation evidence, survivor list, exploratory session. Ask for original machine-readable evidence and actual commit SHA. Do not invent mutant IDs.
@@ -38,12 +38,3 @@ git push -u origin docs/pako-methodology-ci
 ```
 
 Open a pull request rather than pushing directly to `main`; request one member to review coverage thresholds, mutation integration and test discovery. A pull request title could be **`Pako: methodology, hybrid rationale, and Week 12 CI quality-gate draft`**.
-
-## Completion requirements before Pako marks Week 12 DONE
-
-1. Run actual unit/integration/acceptance tests; record each level's command.
-2. Collect current-run `coverage.xml` and record its real line/branch rates.
-3. Integrate mutmut current-run evidence from Maano, enable `enforce_mutation` and enforce *both* group-approved thresholds.
-4. Save passing and intentionally failing GitHub Actions URLs/screenshots.
-5. Update these markdown files and the Word file with the actual data; then send the final excerpts to Thabiso.
-6. Coordinate the one-page AI tool use declaration with group documentation lead.
