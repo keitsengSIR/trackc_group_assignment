@@ -1,8 +1,6 @@
-# Pako — Report-Ready Sections (Draft)
+# Pako — Report-Ready Sections 
 
 **COMP 441 / Track C | SmartCare Hospital Management System | Prepared 17 October 2026**
-
-**Ownership and status:** These are **Pako's sections only**, ready for team review by Thabiso. They are source-grounded drafts; bracketed evidence entries must be replaced with results from completed work before final submission.
 
 ## Methodology — Weeks 5–6; updated through Week 12
 
