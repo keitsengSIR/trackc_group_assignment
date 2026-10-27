@@ -1,7 +1,5 @@
-# PAKO — Own Work / Week Deliverables / Handoff to Teammates
-
 **Project:** COMP 441, Track C, SmartCare  
-**Owner:** Pako only (not the master group report)  
+**Owner:** Pako 
 **Prepared:** 17 October 2026  
 **Repository:** https://github.com/keitsengSIR/trackc_group_assignment
 
