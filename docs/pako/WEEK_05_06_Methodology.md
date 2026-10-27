@@ -1,4 +1,4 @@
-# PAKO | COMP 441 Track C | Methodology (Weeks 5–6; update through Week 12)
+# | COMP 441 Track C | Methodology (Weeks 5–6; update through Week 12)
 
 **Owner:** Pako  
 **Project:** SmartCare hospital management system  
