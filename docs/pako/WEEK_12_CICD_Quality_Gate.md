@@ -1,4 +1,4 @@
-# PAKO | COMP 441 Track C | CI/CD Pipeline Summary and Quality-Gate Justification
+# | COMP 441 Track C | CI/CD Pipeline Summary and Quality-Gate Justification
 
 **Relevant delivery:** Week 12 (10 November 2026) final submission, Week 13 (17 November 2026) live demonstration.  
 **Owner:** Pako  
