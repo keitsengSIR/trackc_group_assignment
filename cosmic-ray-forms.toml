@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "patient/forms/patients.py"
+timeout = 60.0
+excluded-modules = []
+test-command = "DJANGO_SETTINGS_MODULE=hms_project.settings.dev .venv/bin/python -m pytest -x -q tests/manual/test_patient_forms_manual.py --ds=hms_project.settings.dev --no-migrations -p no:cacheprovider"
+
+[cosmic-ray.distributor]
+name = "local"

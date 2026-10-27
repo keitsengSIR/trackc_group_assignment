@@ -1,0 +1,173 @@
+[job-id] c08f05103d67463387057ce73c041fa1
+patient\forms\patients.py core/ReplaceTrueWithFalse 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -42,7 +42,7 @@
+             'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
+         }
+
+-    def save(self, commit=True):
++    def save(self, commit=False):
+         instance = super().save(commit=False)
+
+         # Map medical_conditions to chronic_diseases if the field exists
+============
+[job-id] f947e5be83c14b68b6d46ad6068ac06b
+patient\forms\patients.py core/ReplaceAndWithOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -46,7 +46,7 @@
+         instance = super().save(commit=False)
+
+         # Map medical_conditions to chronic_diseases if the field exists
+-        if 'medical_conditions' in self.cleaned_data and hasattr(instance, 'chronic_diseases'):
++        if 'medical_conditions' in self.cleaned_data or hasattr(instance, 'chronic_diseases'):
+             instance.chronic_diseases = self.cleaned_data['medical_conditions']
+
+         if commit:
+============
+[job-id] 8eeb9d3c2c9d429d8a8e8dd3f3d7a8cf
+patient\forms\patients.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -20,7 +20,7 @@
+
+     # Add medical_conditions field (instead of chronic_diseases)
+     medical_conditions = forms.CharField(
+-        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
++        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+         required=False
+     )
+
+============
+[job-id] 6b3f66c8f6bd49a6a0b00020195ad79b
+patient\forms\patients.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -20,7 +20,7 @@
+
+     # Add medical_conditions field (instead of chronic_diseases)
+     medical_conditions = forms.CharField(
+-        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
++        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 1}),
+         required=False
+     )
+
+============
+[job-id] 27046b352cad4ca5a8216747b3440b2e
+patient\forms\patients.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -34,7 +34,7 @@
+             'blood_group': forms.Select(attrs={'class': 'form-select'}),
+             'email': forms.EmailInput(attrs={'class': 'form-control'}),
+             'phone': forms.TextInput(attrs={'class': 'form-control'}),
+-            'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
++            'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+             'emergency_contact_name': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_relation': forms.TextInput(attrs={'class': 'form-control'}),
+============
+[job-id] c5399e1f45b749cbbf0c3a9694492124
+patient\forms\patients.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -34,7 +34,7 @@
+             'blood_group': forms.Select(attrs={'class': 'form-select'}),
+             'email': forms.EmailInput(attrs={'class': 'form-control'}),
+             'phone': forms.TextInput(attrs={'class': 'form-control'}),
+-            'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
++            'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
+             'emergency_contact_name': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_relation': forms.TextInput(attrs={'class': 'form-control'}),
+============
+[job-id] 770db40a5505479ca9f1ead088e625ce
+patient\forms\patients.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -38,7 +38,7 @@
+             'emergency_contact_name': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_relation': forms.TextInput(attrs={'class': 'form-control'}),
+-            'allergies': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
++            'allergies': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+             'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
+         }
+
+============
+[job-id] 08f66f0129284d9c906d7dd625f6e6be
+patient\forms\patients.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -38,7 +38,7 @@
+             'emergency_contact_name': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_relation': forms.TextInput(attrs={'class': 'form-control'}),
+-            'allergies': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
++            'allergies': forms.Textarea(attrs={'class': 'form-control', 'rows': 1}),
+             'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
+         }
+
+============
+[job-id] b02b296485f44df9af60cbeb0b44989f
+patient\forms\patients.py core/NumberReplacer 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -39,7 +39,7 @@
+             'emergency_contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_relation': forms.TextInput(attrs={'class': 'form-control'}),
+             'allergies': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
+-            'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
++            'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+         }
+
+     def save(self, commit=True):
+============
+[job-id] 953a5285f3514db89d8f8ad45c04d04d
+patient\forms\patients.py core/NumberReplacer 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/patient\forms\patients.py
++++ b/patient\forms\patients.py
+@@ -39,7 +39,7 @@
+             'emergency_contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
+             'emergency_contact_relation': forms.TextInput(attrs={'class': 'form-control'}),
+             'allergies': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
+-            'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 2}),
++            'chronic_diseases': forms.Textarea(attrs={'class': 'form-control', 'rows': 1}),
+         }
+
+     def save(self, commit=True):
+============
+total jobs: 16
+complete: 16 (100.00%)
+surviving mutants: 10 (62.50%)

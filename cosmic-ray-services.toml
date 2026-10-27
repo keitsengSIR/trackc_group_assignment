@@ -1,0 +1,14 @@
+# Historical configuration only.
+# The original tests/ai_generated test path is not present in the
+# current checkout, and extract_keywords was not found in the searched
+# patient and test files. Do not use this config to claim reproducibility
+# until the original test suite is restored or an equivalent test is added.
+
+[cosmic-ray]
+module-path = "patient/services.py"
+timeout = 60.0
+excluded-modules = []
+test-command = "pytest -x -q tests/ai_generated -k extract_keywords -p no:cacheprovider"
+
+[cosmic-ray.distributor]
+name = "local"

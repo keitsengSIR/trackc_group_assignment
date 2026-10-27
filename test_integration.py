@@ -1,16 +1,25 @@
 import pytest
-from django.urls import reverse
-from patient.models import Patient # Adjust model import based on your actual app structure
+from patient.models import Patient
+
 
 @pytest.mark.django_db
-def test_patient_database_persistence(client):
-    """Test that submitting valid patient details successfully persists to SQLite database."""
-    # Example integration check verifying patient record creation and query retrieval
-    initial_count = Patient.objects.count() if hasattr(Patient, 'objects') else 0
-    
-    # Simulate data creation or model persistence
-    # patient = Patient.objects.create(name="Test Patient", age=30, medical_id="MED-1234")
-    # assert Patient.objects.count() == initial_count + 1
-    
-    # Fallback assertion if model fields vary
-    assert True
+def test_patient_database_persistence():
+    """Verify a synthetic patient record persists and can be retrieved."""
+    patient = Patient.objects.create(
+        first_name="Testa",
+        last_name="Patientson",
+        gender="F",
+        date_of_birth="1990-05-20",
+        phone="0000000001",
+        address="1 Synthetic Street, Testville",
+        emergency_contact_name="Contact Tester",
+        emergency_contact_phone="0000000002",
+        emergency_contact_relation="Sibling",
+    )
+
+    assert patient.pk is not None
+
+    saved_patient = Patient.objects.get(pk=patient.pk)
+    assert saved_patient.first_name == "Testa"
+    assert saved_patient.last_name == "Patientson"
+    assert saved_patient.patient_id

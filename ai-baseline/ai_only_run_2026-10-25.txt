@@ -1,0 +1,174 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.7.0
+django: version: 4.2.9, settings: hms_project.settings.dev (from ini)
+rootdir: C:\dev\trackc_group_assignment
+configfile: pytest.ini
+plugins: cov-7.1.0, django-4.14.0
+collected 118 items
+
+tests\ai_generated\test_patient_ai.py ............x..................... [ 28%]
+........................................................................ [ 89%]
+............                                                             [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                                                                 Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------------------------------------------
+appointment\__init__.py                                                                  0      0   100%
+appointment\admin.py                                                                    16      0   100%
+appointment\apps.py                                                                      4      0   100%
+appointment\forms\__init__.py                                                            4      4     0%   6-19
+appointment\forms\appointments.py                                                       86     86     0%   1-162
+appointment\forms\availability.py                                                       21     21     0%   1-34
+appointment\forms\leave.py                                                              58     58     0%   1-110
+appointment\migrations\0001_initial.py                                                   7      7     0%   3-16
+appointment\migrations\0002_initial.py                                                   6      6     0%   3-16
+appointment\migrations\0003_doctorleaverequest.py                                        6      6     0%   3-15
+appointment\migrations\0004_appointment_is_emergency.py                                  4      4     0%   3-12
+appointment\migrations\__init__.py                                                       0      0   100%
+appointment\models.py                                                                  143     65    55%   30, 34-45, 85, 89-111, 115-121, 126-127, 135-138, 147-150, 210, 214-282, 286-287, 292-296
+appointment\urls.py                                                                      3      3     0%   1-4
+appointment\views\__init__.py                                                            7      7     0%   6-43
+appointment\views\appointments.py                                                      327    327     0%   1-572
+appointment\views\availability.py                                                       47     47     0%   1-61
+appointment\views\dashboards.py                                                        105    105     0%   1-231
+appointment\views\inquiries.py                                                         165    165     0%   1-335
+appointment\views\leave.py                                                             101    101     0%   1-180
+appointment\views\notifications.py                                                     102    102     0%   1-190
+billing\__init__.py                                                                      0      0   100%
+billing\admin.py                                                                        43      1    98%   59
+billing\apps.py                                                                          4      0   100%
+billing\forms.py                                                                        80     80     0%   1-172
+billing\migrations\0001_initial.py                                                       9      9     0%   3-19
+billing\migrations\__init__.py                                                           0      0   100%
+billing\models.py                                                                      142     36    75%   21, 36, 106, 110-126, 129, 134, 139, 186, 190-193, 229, 233-252
+billing\urls.py                                                                          3      3     0%   1-4
+billing\views.py                                                                         4      4     0%   1-5
+core\__init__.py                                                                         0      0   100%
+core\apps.py                                                                             5      0   100%
+core\constants.py                                                                       18      0   100%
+core\decorators.py                                                                      40     25    38%   17-27, 33-39, 52-62
+core\mixins.py                                                                          13     13     0%   2-20
+core\utils.py                                                                            3      3     0%   4-15
+patient\__init__.py                                                                      0      0   100%
+patient\admin.py                                                                        74     15    80%   30-33, 37-38, 82, 85, 120-126, 129
+patient\apps.py                                                                          4      0   100%
+patient\forms\__init__.py                                                                5      0   100%
+patient\forms\admissions.py                                                             68     42    38%   54-85, 88-107, 114-123, 152-154
+patient\forms\medical_records.py                                                        23      6    74%   42-52
+patient\forms\patients.py                                                               24      0   100%
+patient\forms\rooms.py                                                                  33      9    73%   23-32, 62-64
+patient\management\__init__.py                                                           0      0   100%
+patient\management\commands\__init__.py                                                  0      0   100%
+patient\management\commands\setup_hospital.py                                           59     59     0%   1-130
+patient\management\commands\setup_nurse_assignments.py                                  68     68     0%   1-231
+patient\migrations\0001_initial.py                                                       8      8     0%   3-18
+patient\migrations\0002_patient_profile_picture.py                                       4      4     0%   3-12
+patient\migrations\0003_medicalrecord_blood_pressure_and_more.py                         4      4     0%   3-12
+patient\migrations\0004_bed_room_patientadmission_nurse_bed_room_and_more.py             7      7     0%   3-16
+patient\migrations\0005_prescription.py                                                  5      5     0%   3-13
+patient\migrations\0006_admissionrequest_and_more.py                                     7      7     0%   3-16
+patient\migrations\0007_update_nurse_floor_assignments.py                                4      4     0%   3-12
+patient\migrations\0008_alter_admissionrequest_preferred_room_type_and_more.py           4      4     0%   3-12
+patient\migrations\__init__.py                                                           0      0   100%
+patient\models.py                                                                      323     81    75%   78, 133, 137, 186, 191-196, 310, 314-346, 351, 356, 361-362, 367, 390, 394-399, 447-448, 453, 461, 466-469, 474-479, 483, 487-491, 552, 610, 614-635, 639-652, 657-658, 663
+patient\selectors.py                                                                    40     40     0%   1-75
+patient\services.py                                                                     32      0   100%
+patient\templatetags\__init__.py                                                         0      0   100%
+patient\templatetags\patient_extras.py                                                  25     25     0%   1-34
+patient\urls.py                                                                          3      3     0%   1-4
+patient\views\__init__.py                                                                8      8     0%   6-57
+patient\views\admission_requests.py                                                    127    127     0%   1-248
+patient\views\admissions.py                                                            173    173     0%   1-324
+patient\views\medical_records.py                                                       135    135     0%   1-236
+patient\views\nurse.py                                                                  60     60     0%   1-108
+patient\views\patients.py                                                              123    123     0%   1-252
+patient\views\reports.py                                                                58     58     0%   1-124
+patient\views\rooms.py                                                                 125    125     0%   1-244
+pharmacy\__init__.py                                                                     0      0   100%
+pharmacy\apps.py                                                                         4      0   100%
+pharmacy\migrations\0001_initial.py                                                      8      8     0%   3-18
+pharmacy\migrations\0002_supplier_country_supplier_representative_and_more.py            4      4     0%   3-12
+pharmacy\migrations\0003_drugrequest.py                                                  6      6     0%   3-16
+pharmacy\migrations\0004_remove_drugrequest_sale.py                                      4      4     0%   3-12
+pharmacy\migrations\__init__.py                                                          0      0   100%
+pharmacy\models.py                                                                     294     77    74%   33, 53-55, 82, 85, 88-90, 114, 117, 120-122, 150, 153-158, 161-164, 181-185, 188, 191-194, 229, 232-244, 247, 263, 266, 270-273, 288, 304, 307-311, 314-321, 324-331, 400, 404, 408, 413, 417, 425
+pharmacy\selectors.py                                                                   13     13     0%   2-23
+pharmacy\services.py                                                                    46     46     0%   2-83
+pharmacy\urls.py                                                                         3      3     0%   1-4
+pharmacy\views\__init__.py                                                               9      9     0%   6-54
+pharmacy\views\dashboard.py                                                             28     28     0%   1-55
+pharmacy\views\drug_requests.py                                                         96     96     0%   2-189
+pharmacy\views\inventory.py                                                             81     81     0%   6-132
+pharmacy\views\medicines.py                                                            137    137     0%   1-282
+pharmacy\views\prescriptions.py                                                         28     28     0%   1-58
+pharmacy\views\purchases.py                                                            102    102     0%   1-196
+pharmacy\views\sales.py                                                                 63     63     0%   1-135
+pharmacy\views\suppliers.py                                                             66     66     0%   1-121
+users\__init__.py                                                                        0      0   100%
+users\admin.py                                                                          15      0   100%
+users\analytics.py                                                                      35     35     0%   7-106
+users\apps.py                                                                            7      0   100%
+users\decorators.py                                                                      2      0   100%
+users\forms\__init__.py                                                                  4      0   100%
+users\forms\accounts.py                                                                107     84    21%   22-43, 61-96, 100-110, 145-183, 187-188, 192-226
+users\forms\auth.py                                                                      8      0   100%
+users\forms\password_reset.py                                                           19      6    68%   44-51
+users\management\__init__.py                                                             0      0   100%
+users\management\commands\__init__.py                                                    0      0   100%
+users\management\commands\create_default_users.py                                       45     45     0%   1-117
+users\management\commands\setup_test_data.py                                            68     68     0%   1-291
+users\middleware.py                                                                     46     46     0%   1-119
+users\migrations\0001_initial.py                                                         8      8     0%   3-17
+users\migrations\0002_user_license_number.py                                             4      4     0%   3-12
+users\migrations\0003_remove_user_license_number.py                                      4      4     0%   3-12
+users\migrations\0004_user_is_available_user_license_number_and_more.py                  4      4     0%   3-12
+users\migrations\0005_rename_license_number_user_doctor_license_number_and_more.py       4      4     0%   3-12
+users\migrations\0006_user_employee_id.py                                                4      4     0%   3-12
+users\migrations\0007_populate_employee_ids.py                                           4      4     0%   3-12
+users\migrations\0008_alter_user_employee_id.py                                          4      4     0%   3-12
+users\migrations\0009_remove_user_employee_id.py                                         4      4     0%   3-12
+users\migrations\0010_alter_user_specialization.py                                       4      4     0%   3-12
+users\migrations\0011_user_is_head_nurse.py                                              4      4     0%   3-12
+users\migrations\__init__.py                                                             0      0   100%
+users\models.py                                                                         89     32    64%   69, 73-75, 80-90, 94, 98, 102, 107, 111, 115, 120-126, 131-137
+users\selectors.py                                                                      11     11     0%   2-24
+users\services.py                                                                       34     34     0%   7-60
+users\urls.py                                                                            4      4     0%   1-5
+users\utils.py                                                                          45     45     0%   1-217
+users\views\__init__.py                                                                  6      6     0%   8-14
+users\views\auth.py                                                                     44     44     0%   2-81
+users\views\dashboard.py                                                                11     11     0%   2-19
+users\views\management.py                                                               39     39     0%   2-58
+users\views\password_reset.py                                                          105    105     0%   2-156
+users\views\profile.py                                                                  82     82     0%   2-130
+website\__init__.py                                                                      0      0   100%
+website\admin.py                                                                        71     13    82%   90-92, 137-138, 142-143, 147-148, 182-183, 187-188
+website\apps.py                                                                          4      0   100%
+website\forms\__init__.py                                                                3      3     0%   6-17
+website\forms\blog.py                                                                   58     58     0%   1-177
+website\forms\inquiries.py                                                              19     19     0%   1-87
+website\management\__init__.py                                                           0      0   100%
+website\management\commands\__init__.py                                                  0      0   100%
+website\management\commands\check_email_replies.py                                     236    236     0%   1-450
+website\migrations\0001_initial.py                                                       7      7     0%   3-16
+website\migrations\0002_appointmentinquiry_is_notification_sent_and_more.py              6      6     0%   3-15
+website\migrations\0003_auto_20250625_2353.py                                            6      6     0%   3-15
+website\migrations\0004_appointmentinquiry_preferred_doctor_and_more.py                  6      6     0%   3-15
+website\migrations\0005_blog.py                                                          6      6     0%   3-15
+website\migrations\0006_blogcomment_blogsubscription.py                                  6      6     0%   3-15
+website\migrations\0007_emailreply.py                                                    5      5     0%   3-13
+website\migrations\__init__.py                                                           0      0   100%
+website\models.py                                                                      178     49    72%   43, 47-53, 104, 108-114, 148, 152-156, 160-164, 169-178, 182-186, 243, 246-254, 257, 261-266, 270-272, 276-277, 317, 346
+website\services.py                                                                     27     27     0%   1-62
+website\tests.py                                                                         1      1     0%   1
+website\urls.py                                                                          4      4     0%   1-6
+website\views\__init__.py                                                                3      3     0%   6-28
+website\views\blog.py                                                                  208    208     0%   1-410
+website\views\pages.py                                                                  92     92     0%   1-181
+------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                 6021   4759    21%
+=========================== short test summary info ===========================
+XFAIL tests/ai_generated/test_patient_ai.py::test_generated_patient_id_fits_within_field_max_length - Generated ID 'P-YYYY-NNNN' is 11 chars but patient_id max_length is 10; SQLite does not enforce it, stricter backends would.
+======================= 117 passed, 1 xfailed in 27.51s =======================

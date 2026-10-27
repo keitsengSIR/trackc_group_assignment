@@ -1,0 +1,36 @@
+[job-id] 0cae1afaeb9f4a63bcb3eabb7d7ba753
+patient\services.py core/ReplaceComparisonOperator_Gt_Eq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e45a5180c8fc45e2bd25ea97e5908e94
+patient\services.py core/ReplaceComparisonOperator_Gt_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 78db7da262f94d7a9866d63032ae8697
+patient\services.py core/ReplaceComparisonOperator_Gt_Lt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 41801a30e35b483783b406bb8f1d8eda
+patient\services.py core/ReplaceComparisonOperator_Gt_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 91568bfc48634e40a8de4507d25a5b92
+patient\services.py core/ReplaceComparisonOperator_Gt_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 153434e7f9cb4633a4d9ac706cbde000
+patient\services.py core/ReplaceAndWithOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] cc3f3d8e3c4c4c2ebc9c252a305258a9
+patient\services.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 84b328b981fc4cf9a6cd37792da1a95e
+patient\services.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c18bac01a8c9497994ed51d3c1f9eebc
+patient\services.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ffeeee2af32f41f791c144d94702b0a5
+patient\services.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] bf68c0f05b8f4ef3b6958e6cb1687de7
+patient\services.py core/ZeroIterationForLoop 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+total jobs: 11
+complete: 11 (100.00%)
+surviving mutants: 0 (0.00%)
