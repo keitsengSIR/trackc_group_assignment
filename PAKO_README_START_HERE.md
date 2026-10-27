@@ -1,5 +1,3 @@
-This package is owned by **Pako** and contains *only* his assigned report sections and proposed CI/CD quality-gate implementation. It does not overwrite Thabiso's, Maano's or Miguel's report documents. It does not claim mutation tests, Django tests or GitHub Actions have already passed.
-
 ## Deliverable labels
 
 - **Weeks 5–6 (report methodology):** `docs/pako/WEEK_05_06_Methodology.md`
